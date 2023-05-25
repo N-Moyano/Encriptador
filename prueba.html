@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Encriptador</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+    
+     
+        
+        <script>
+            function captura() {
+                var mensajeAencriptar = document.getElementById("mensaje").value;
+                (mensajeAencriptar);
+
+                (mensajeAencriptar = mensajeAencriptar.replace(/e/g, 'enter'));
+                          
+                (mensajeAencriptar = mensajeAencriptar.replace(/i/g, 'imes'));
+
+                (mensajeAencriptar = mensajeAencriptar.replace(/a/g, 'ai'));
+
+                (mensajeAencriptar = mensajeAencriptar.replace(/o/g, 'ober'));
+
+                (mensajeencriptado = mensajeAencriptar.replace(/u/g, 'ufat'));
+                
+                console.log(mensajeencriptado);
+            }
+            
+       </script>
+
+
+    </head>
+    <body>
+        <input type="text" id="mensaje" placeholder="Ingrese texto aquí">
+        <button type="button" onclick="captura()">Encriptar</button>
+
+      
+    </body>
+    </html>
+    

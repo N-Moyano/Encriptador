@@ -1,16 +1,69 @@
 <!DOCTYPE html>
-<html lang = "en">
-<head>
-     <meta charset = "UTF-8">
-     <title> Lista de Cursos de DevOps de Alura </title>
-</head>
-<body>
-     <ul>
-         <li> Vagrant: Gerenciando máquinas virtuales </li>
-         <li> Docker: Creando contenedores sin dolor de cabeza </li>
-         <li> Ansible: Su infraestructura como codigo </li>
-         <li> Integración Continua: Madurez y productividad en el desarrolo de</li>
-         <li> Kubernetes: introducción a la orquestación de containers </li>
-     </ul>
-</body>
-</html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Encriptador</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+        <script>
+            function captura() {
+                var mensajeAencriptar = document.getElementById("decodificador").value;
+                
+                (mensajeAencriptar = mensajeAencriptar.replace(/e/g, 'enter'));
+                          
+                (mensajeAencriptar = mensajeAencriptar.replace(/i/g, 'imes'));
+
+                (mensajeAencriptar = mensajeAencriptar.replace(/a/g, 'ai'));
+
+                (mensajeAencriptar = mensajeAencriptar.replace(/o/g, 'ober'));
+
+                (mensajeEncriptado = mensajeAencriptar.replace(/u/g, 'ufat'));
+                
+                console.log(mensajeEncriptado);
+            }
+            
+       </script>
+    </head>
+
+    <body>
+        <header>
+            <div class="logoBox">
+            <img class="logo" src="Images/Logo.png">
+            </div>
+        </header>
+        <div class="frame1">
+            <input type="text" id="decodificador" class="input" placeholder="Ingrese texto aquí">
+        </div>
+        <div class="rectangulo">
+            <ul class="cuadrado">
+                <img class="muneco" src="Images/Muñeco.png">
+            </ul>
+        </div>
+        <div class="observaciones">
+            <div class="cuadro1">
+                
+                <output type="text" id="mensajeEncriptado" class="output" placeholder="No hay ningún mensaje"> </output>
+                
+            </div>
+            <div class="cuadro2">
+                <p class="indicaciones">Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>   
+        </div>
+        <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+              </svg>
+            <p> Solo letras minúsculas y sin acentos</p>
+        </div>
+        <div class="botones">
+                                    
+            <button class="encriptar" onclick="captura()">Encriptar</button>
+            <button class="desencriptar" onclick="myFunction()">Desencriptar</button>
+             
+        
+        
+    </body>
+</html> 
