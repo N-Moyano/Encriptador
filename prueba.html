@@ -24,9 +24,11 @@
 
                 (mensajeAencriptar = mensajeAencriptar.replace(/o/g, 'ober'));
 
-                (mensajeencriptado = mensajeAencriptar.replace(/u/g, 'ufat'));
+                (mensajeEncriptado = mensajeAencriptar.replace(/u/g, 'ufat'));
                 
-                console.log(mensajeencriptado);
+                console.log(mensajeEncriptado);
+                
+                document.getElementById("demo").innerHTML = mensajeEncriptado;
             }
             
        </script>
@@ -36,8 +38,10 @@
     <body>
         <input type="text" id="mensaje" placeholder="Ingrese texto aquí">
         <button type="button" onclick="captura()">Encriptar</button>
-
-      
+        <output type="text" id="mensajeEncriptado" class="output" placeholder="No hay ningún mensaje"> </output>
+        <p id="demo"></p>
+        
+        
     </body>
     </html>
     
