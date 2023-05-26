@@ -23,11 +23,13 @@
                 (mensajeEncriptado = mensajeAencriptar.replace(/u/g, 'ufat'));
                 
                 console.log(mensajeEncriptado);
-                document.getElementById("demo").innerHTML = mensajeEncriptado;
+                document.getElementById("texto").innerHTML = mensajeEncriptado;
+                document.getElementById("esconder").style.display = "none";
+                document.getElementById("esconder2").style.display = "none";
             }
             
-       </script>
-       <script>
+        </script>
+        <script>
         function desencript() {
             var mensajeAdesencriptar = document.getElementById("decodificador").value;
             
@@ -42,10 +44,11 @@
             (mensajeDesencriptado = mensajeAdesencriptar.replace(/ufat/g, 'u'));
             
             console.log(mensajeDesencriptado);
-            document.getElementById("demo").innerHTML = mensajeDesencriptado;
+            
+            document.getElementById("texto").innerHTML = mensajeDesencriptado;
+            
         }
-        
-   </script>
+        </script>
     </head>
 
     <body>
@@ -60,15 +63,14 @@
 
         </div>
         <div class="rectangulo">
-            <ul class="cuadrado">
+            <ul id="esconder" class="cuadrado">
                 <img class="muneco" src="Images/Muñeco.png">
             </ul>
+            <ul>
+            <p class="texto" id="texto"></p>                
+            </ul>
         </div>
-        <div class="observaciones">
-            <div class="cuadro1">
-                
-                <p id="demo"></p>                
-            </div>
+        <div id="esconder2" class="observaciones">
             <div class="cuadro2">
                 <p class="indicaciones">Ingresa el texto que desees encriptar o desencriptar.</p>
             </div>   

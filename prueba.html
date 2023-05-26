@@ -29,9 +29,11 @@
                 console.log(mensajeEncriptado);
                 
                 document.getElementById("demo").innerHTML = mensajeEncriptado;
+                document.getElementById("muneco").style.display = "none";
             }
             
        </script>
+       
 
 
     </head>
@@ -40,7 +42,9 @@
         <button type="button" onclick="captura()">Encriptar</button>
         <output type="text" id="mensajeEncriptado" class="output" placeholder="No hay ningún mensaje"> </output>
         <p id="demo"></p>
+        <img id="muneco" class="muneco" src="Images/Muñeco.png">
         
+
         
     </body>
     </html>
