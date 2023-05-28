@@ -49,6 +49,7 @@
             
         }
         </script>
+        
     </head>
 
     <body>
@@ -57,11 +58,12 @@
             <img class="logo" src="Images/Logo.png">
             </div>
         </header>
-        <div class="frame1">
-            <input type="text" id="decodificador" class="input" placeholder="Ingrese texto aquí">
-            <output id="mensajeEncriptado" class="output" placeholder="No hay ningún mensaje"> </output>
-
-        </div>
+        <div class="frame1" id="contenedor">
+            
+                <input type="text" id="decodificador" class="input" placeholder="Ingrese texto aquí">
+                <output id="mensajeEncriptado" class="output" placeholder="No hay ningún mensaje"> </output>
+            
+        </div>  
         <div class="rectangulo">
             <ul id="esconder" class="cuadrado">
                 <img class="muneco" src="Images/Muñeco.png">
@@ -86,7 +88,7 @@
             <button class="encriptar" onclick="encript()">Encriptar</button>
             <button class="desencriptar" onclick="desencript()">Desencriptar</button>
              
-        
+        </div>
         
     </body>
 </html> 
