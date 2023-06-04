@@ -45,11 +45,6 @@ body{
     font-size: 32px;
     line-height: 150%;
     color: #0A3871;
-
-
-#contenedor{
-    display: inline-block;
-    min-width: 100px;
 }   
 
 #ingreseTexto{
@@ -269,4 +264,29 @@ input{
     flex-grow: 1;
 }
 
+.fake-textarea {
+    
+    width: 30rem;
+    padding: .5rem;
+    min-height: 1rem;
+  }
+  .fake-textarea:empty::before {
+    position: absolute;
+    content: "Escribe aquí...";
+  }
+  #decodificador {
+    display: none;
+    border-style: none;
+    
 
+  }
+.botonCopiar{
+    border: 1;
+    border-radius: 24px;
+    position: absolute; 
+    width: 100px;
+    height: 50px;
+    left: 150px;
+    top: 800px;
+     
+}

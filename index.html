@@ -22,12 +22,12 @@
 
                 (mensajeEncriptado = mensajeAencriptar.replace(/u/g, 'ufat'));
                 
-                console.log(mensajeEncriptado);
                 document.getElementById("texto").innerHTML = mensajeEncriptado;
                 document.getElementById("esconder").style.display = "none";
                 document.getElementById("esconder2").style.display = "none";
-            }
-            
+                document.getElementById("botonCopiar").style.display = "inline";
+                console.log(mensajeEncriptado);            }
+                
         </script>
         <script>
         function desencript() {
@@ -42,26 +42,47 @@
             (mensajeAdesencriptar = mensajeAdesencriptar.replace(/ober/g, 'o'));
 
             (mensajeDesencriptado = mensajeAdesencriptar.replace(/ufat/g, 'u'));
-            
-            console.log(mensajeDesencriptado);
-            
+                       
             document.getElementById("texto").innerHTML = mensajeDesencriptado;
+            document.getElementById("esconder").style.display = "none";
+            document.getElementById("esconder2").style.display = "none";
             
         }
         </script>
+        <script>
+            function funcionCopiar() {
+              // Get the text field
+              var copyText = document.getElementById("mensajeEncriptado");
+            
+              // Select the text field
+              copyText.select;
+              copyText.setSelectionRange(0, 99999); // For mobile devices
+            
+              // Copy the text inside the text field
+              navigator.clipboard.writeText(copyText.value);
+              
+              // Alert the copied text
+              alert("Copied the text: " + copyText.value);
+            }
+            </script>
         
+       
+    
     </head>
-
+    
     <body>
+        
         <header>
             <div class="logoBox">
             <img class="logo" src="Images/Logo.png">
             </div>
         </header>
+     
         <div class="frame1" id="contenedor">
-            
-                <input type="text" id="decodificador" class="input" placeholder="Ingrese texto aquí">
-                <output id="mensajeEncriptado" class="output" placeholder="No hay ningún mensaje"> </output>
+            <form>
+                <div contenteditable class="fake-textarea" oninput="document.querySelector('#decodificador').textContent = this.innerText"></div>
+                <textarea id="decodificador"></textarea>
+            </form>
             
         </div>  
         <div class="rectangulo">
@@ -69,8 +90,12 @@
                 <img class="muneco" src="Images/Muñeco.png">
             </ul>
             <ul>
-            <p class="texto" id="texto"></p>                
+            <p class="texto" id="texto"></p>
             </ul>
+            <div class="copiar">
+                <button id="botonCopiar" class="botonCopiar" onclick="funcionCopiar()" style="display: none;">Copy</button>
+                
+            </div>  
         </div>
         <div id="esconder2" class="observaciones">
             <div class="cuadro2">
@@ -83,6 +108,7 @@
               </svg>
             <p> Solo letras minúsculas y sin acentos</p>
         </div>
+        
         <div class="botones">
                                     
             <button class="encriptar" onclick="encript()">Encriptar</button>
