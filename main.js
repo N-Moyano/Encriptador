@@ -14,7 +14,7 @@ function encript() {
     document.getElementById("texto").innerHTML = mensajeEncriptado;
     document.getElementById("esconder").style.display = "none";
     document.getElementById("esconder2").style.display = "none";
-    document.getElementById("btnCopiar").style.display = "inline-block";
+    document.getElementById("btn-copy").style.display = "inline-block";
     console.log(mensajeEncriptado);            }
     
 
@@ -37,17 +37,35 @@ document.getElementById("esconder2").style.display = "none";
 
 }
 
-     
+const elemento = document.querySelector('.contenido-texto');
+
+document.querySelector('#btn-copy').addEventListener('click',()=>{
+
+    document.querySelector('.mensaje-copy').classList.add('show');
+    copyToClipBoard(elemento);
+
+    setTimeout(()=>{
+        document.querySelector('.mensaje-copy').classList.remove('show');
+    },1300);
+})     
 
   
-  document.querySelector("#copy").addEventListener("click", copy);
-  
-  function copiar() {
-    // Aquí puedes agregar la lógica para obtener el texto que deseas copiar
-    const textoACopiar = texto;
-  
-    // Llamar a la función updateClipboard para copiar el texto al portapapeles
-    updateClipboard(textoACopiar);
+
+function copyToClipBoard(elemento){
+    const inputOculto = document.createElement('input');
+
+    inputOculto.setAttribute('value', elemento.innerText);
+
+    document.body.appendChild(inputOculto);
+
+    inputOculto.select();
+
+    document.execCommand('copy');
+
+    document.body.removeChild(inputOculto);
+
+
+}
 
 
 //const elemento = document.querySelector('.texto');
