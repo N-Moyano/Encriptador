@@ -30,22 +30,7 @@
             }
             
        </script>
-       <script>
-        function funcionCopiar() {
-          // Get the text field
-          var copyText = document.getElementById("mensajeEncriptado");
-        
-          // Select the text field
-          copyText.select();
-          copyText.setSelectionRange(0, 99999); // For mobile devices
-        
-          // Copy the text inside the text field
-          navigator.clipboard.writeText(copyText.value);
-          
-          // Alert the copied text
-          alert("Copied the text: " + copyText.value);
-        }
-        </script>
+    
        
         <title>Ocultar y mostrar un botón con Java Script y jQuery</title>
         < <div class="frame1" id="contenedor">
@@ -63,7 +48,7 @@
             <p class="texto" id="texto"></p>
             </ul>
             <div class="copiar">
-                <button id="botonCopiar" class="botonCopiar" onclick="funcionCopiar()" style="display: none;">Copy</button>
+                <button id="botonCopiar" class="botonCopiar" onclick="funcionCopiar()" style="display: inline-block">Copy</button>
                 
             </div>  
         </div>
@@ -76,5 +61,21 @@
 
         
     </body>
+    <script>
+        function funcionCopiar() {
+          // Get the text field
+          var copyText = document.getElementById("mensajeEncriptado");
+        
+          // Select the text field
+          copyText.select();
+          copyText.setSelectionRange(0, 99999); // For mobile devices
+        
+          // Copy the text inside the text field
+          navigator.clipboard.writeText(copyText.value);
+          
+          // Alert the copied text
+          alert("Copied the text: " + copyText.value);
+        }
+        </script>
     </html>
     
