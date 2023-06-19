@@ -15,7 +15,7 @@ function encript() {
     document.getElementById("esconder").style.display = "none";
     document.getElementById("esconder2").style.display = "none";
     document.getElementById("btn-copy").style.display = "inline-block";
-    console.log(mensajeEncriptado);            }
+}
     
 
 function desencript() {
@@ -37,48 +37,24 @@ document.getElementById("esconder2").style.display = "none";
 
 }
 
-const elemento = document.querySelector('.contenido-texto');
-
-document.querySelector('#btn-copy').addEventListener('click',()=>{
-
-    document.querySelector('.mensaje-copy').classList.add('show');
-    copyToClipBoard(elemento);
-
-    setTimeout(()=>{
-        document.querySelector('.mensaje-copy').classList.remove('show');
-    },1300);
-})     
+  
 
   
 
-function copyToClipBoard(elemento){
-    const inputOculto = document.createElement('input');
-
-    inputOculto.setAttribute('value', elemento.innerText);
-
-    document.body.appendChild(inputOculto);
-
-    inputOculto.select();
-
-    document.execCommand('copy');
-
-    document.body.removeChild(inputOculto);
-
-
-}
-
-
-//const elemento = document.querySelector('.texto');
-
-//document.querySelector('#btnCopiar').addEventListener('click',()=>{
-//    copiarAlPortapapeles(elemento); 
-//})
-
-//function copiarAlPortapapeles(elemento){
-//    const entradaOculta =document.createElement('input');
-
-//    entradaOculta.setAttribute('value' , elemento.innerText);
-//    document.body.appendChild(entradaOculta);
-    
-//    console.log(entradaOculta);
-//}
+const btnCopiar = str => {
+    // PASO 1
+    const el = document.createElement("textarea");
+    // PASO 2
+    el.value = aCopiar.value;
+    el.setAttribute("readonly", "");
+    // PASO 3
+    el.style.position = "absolute";
+    el.style.left = "-9999px";
+    document.body.appendChild(el);
+    // PASO 4
+    el.select();
+    // PASO 5
+    document.execCommand("copy");
+    // PASO 6
+    document.body.removeChild(el);
+  };

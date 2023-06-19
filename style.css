@@ -1,10 +1,33 @@
+*{  
+    background: #F3F5Fc;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+}
+
+.logo{
+    padding-top: 10px;
+    margin-left: 10px;
+    width: 100%;
+
+}
+
+main{
+    display: flex;
+    margin-bottom: 50px;
+    margin-left: 50px;
+}
+
+
+
 body{
-    box-sizing: border-box;
+    /*box-sizing: border-box;
     position: absolute;
     width: 1440px;
-    height: 1024px;
-    background: #F3F5FC;
-    border: solid 1px;
+    height: 1024px;*/
+    
+    /*border: solid 1px;*/
     color: #0A3871;
     
 
@@ -20,14 +43,7 @@ body{
     
 }
 
-.logo{
-    position: relative;
-    left: 36.67%;
-    right: 37.43%;
-    top: 0%;
-    bottom: 0%;
-     
-}
+
 
 .frame1{
     border: 1;
@@ -257,6 +273,8 @@ body{
   .fake-textarea:empty::before {
     position: absolute;
     content: "Escribe aquí...";
+    text-transform: lowercase;
+    .text-area
   }
   #decodificador {
     display: none;
@@ -290,6 +308,6 @@ body{
     align-items: center;
     font-weight: 900;
     visibility: hidden;
-    opacity: 0;
-}
+    /*opacity: 0;*/
 
+}

@@ -7,75 +7,16 @@
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
-        
-        <script>
-            function captura() {
-                var mensajeAencriptar = document.getElementById("mensaje").value;
-                (mensajeAencriptar);
-
-                (mensajeAencriptar = mensajeAencriptar.replace(/e/g, 'enter'));
-                          
-                (mensajeAencriptar = mensajeAencriptar.replace(/i/g, 'imes'));
-
-                (mensajeAencriptar = mensajeAencriptar.replace(/a/g, 'ai'));
-
-                (mensajeAencriptar = mensajeAencriptar.replace(/o/g, 'ober'));
-
-                (mensajeEncriptado = mensajeAencriptar.replace(/u/g, 'ufat'));
-                
-                console.log(mensajeEncriptado);
-                
-                document.getElementById("demo").innerHTML = mensajeEncriptado;
-                document.getElementById("muneco").style.display = "none";
-            }
-            
-       </script>
+           
     
-       
-        <title>Ocultar y mostrar un botón con Java Script y jQuery</title>
-        < <div class="frame1" id="contenedor">
-            <form>
-                <div contenteditable class="fake-textarea" oninput="document.querySelector('#decodificador').textContent = this.innerText"></div>
-                <textarea id="decodificador"></textarea>
-            </form>
-            
-        </div>  
-        <div class="rectangulo">
-            <ul id="esconder" class="cuadrado">
-                <img class="muneco" src="Images/Muñeco.png">
-            </ul>
-            <ul>
-            <p class="texto" id="texto"></p>
-            </ul>
-            <div class="copiar">
-                <button id="botonCopiar" class="botonCopiar" onclick="funcionCopiar()" style="display: inline-block">Copy</button>
-                
-            </div>  
-        </div>
-        <div id="esconder2" class="observaciones">
-            <div class="cuadro2">
-                <p class="indicaciones">Ingresa el texto que desees encriptar o desencriptar.</p>
-            </div>   
-        </div>
-          </body>
+    </head>
 
-        
     </body>
-    <script>
-        function funcionCopiar() {
-          // Get the text field
-          var copyText = document.getElementById("mensajeEncriptado");
-        
-          // Select the text field
-          copyText.select();
-          copyText.setSelectionRange(0, 99999); // For mobile devices
-        
-          // Copy the text inside the text field
-          navigator.clipboard.writeText(copyText.value);
-          
-          // Alert the copied text
-          alert("Copied the text: " + copyText.value);
-        }
-        </script>
-    </html>
+
+        <div class="mensaje-copy">
+            <p>¡Copiado al portapapeles!</p>
+        </div>
+        <script src="main.js"></script>  
+    </body>
+</html>
     

@@ -7,6 +7,9 @@
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
         
     </head>
@@ -21,12 +24,11 @@
         </header>
      
         <div class="frame1" id="contenedor">
-            <form>
-                <div contenteditable class="fake-textarea" oninput="document.querySelector('#decodificador').textContent = this.innerText"></div>
-                <textarea id="decodificador"></textarea>
-            </form>
             
-            </div>  
+            <textarea id="decodificador" class="aCopiar"></textarea>
+          
+            
+        </div>  
 
             <div class="margenDerecho">
             <div class="rectangulo">
@@ -37,16 +39,12 @@
                 <p class="texto"></p>
             </div>
 
-            <div class="mensaje-copy">
-                <p>¡Copiado al portapapeles!</p>
-            </div>
-
             <div class="contenedo-btnCopy">
                 <button id="btn-copy" style="display: none;">Copy <i class="far fa-copy"></i></button>
                 
             </div>  
             </div>
-
+            
             <div id="esconder2" class="observaciones">
             <div class="cuadro2">
                 <p class="indicaciones">Ingresa el texto que desees encriptar o desencriptar.</p>
@@ -69,8 +67,11 @@
              
         </div>
     </div>
-        
-        <script src="main.js" ></script>  
+    <div class="mensaje-copy">
+        <p>¡Copiado al portapapeles!</p>
+    </div>
+    
+    <script src="main.js" ></script>  
     </body>
 
     
