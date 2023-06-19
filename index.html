@@ -8,47 +8,6 @@
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
 
-        <script>
-            function encript() {
-                var mensajeAencriptar = document.getElementById("decodificador").value;
-                
-                (mensajeAencriptar = mensajeAencriptar.replace(/e/g, 'enter'));
-                          
-                (mensajeAencriptar = mensajeAencriptar.replace(/i/g, 'imes'));
-
-                (mensajeAencriptar = mensajeAencriptar.replace(/a/g, 'ai'));
-
-                (mensajeAencriptar = mensajeAencriptar.replace(/o/g, 'ober'));
-
-                (mensajeEncriptado = mensajeAencriptar.replace(/u/g, 'ufat'));
-                
-                console.log(mensajeEncriptado);
-                document.getElementById("texto").innerHTML = mensajeEncriptado;
-                document.getElementById("esconder").style.display = "none";
-                document.getElementById("esconder2").style.display = "none";
-            }
-            
-        </script>
-        <script>
-        function desencript() {
-            var mensajeAdesencriptar = document.getElementById("decodificador").value;
-            
-            (mensajeAdesencriptar = mensajeAdesencriptar.replace(/enter/g, 'e'));
-                      
-            (mensajeAdesencriptar = mensajeAdesencriptar.replace(/imes/g, 'i'));
-
-            (mensajeAdesencriptar = mensajeAdesencriptar.replace(/ai/g, 'a'));
-
-            (mensajeAdesencriptar = mensajeAdesencriptar.replace(/ober/g, 'o'));
-
-            (mensajeDesencriptado = mensajeAdesencriptar.replace(/ufat/g, 'u'));
-            
-            console.log(mensajeDesencriptado);
-            
-            document.getElementById("texto").innerHTML = mensajeDesencriptado;
-            
-        }
-        </script>
         
     </head>
 
@@ -60,7 +19,7 @@
         </header>
         <div class="frame1" id="contenedor">
             
-                <input type="text" id="decodificador" class="input" placeholder="Ingrese texto aquí">
+                <input type="text" id="decodificador" class="input" placeholder="Ingrese texto aquí"></input>
                 <output id="mensajeEncriptado" class="output" placeholder="No hay ningún mensaje"> </output>
             
         </div>  
@@ -69,13 +28,14 @@
                 <img class="muneco" src="Images/Muñeco.png">
             </ul>
             <ul>
-            <p class="texto" id="texto"></p>                
+            <p class="texto" id="texto"></p> 
             </ul>
-        </div>
-        <div id="esconder2" class="observaciones">
-            <div class="cuadro2">
+            </div>
+        <div  class="observaciones">
+            <div id="esconder2" class="cuadro2">
                 <p class="indicaciones">Ingresa el texto que desees encriptar o desencriptar.</p>
-            </div>   
+            </div>
+            <button id="btn-copiar" class="btn-copiar" onclick="btnCopiar()">Copiar <i class="far fa-copy"></i></button>   
         </div>
         <div class="icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16">
@@ -89,6 +49,6 @@
             <button class="desencriptar" onclick="desencript()">Desencriptar</button>
              
         </div>
-        
+    <script src="main.js"></script>        
     </body>
 </html> 
