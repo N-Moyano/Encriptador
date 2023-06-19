@@ -11,10 +11,18 @@ function encript() {
 
     (mensajeEncriptado = mensajeAencriptar.replace(/u/g, 'ufat'));
     
+<<<<<<< HEAD
     document.getElementById("texto").innerHTML = mensajeEncriptado;
     document.getElementById("esconder").style.display = "none";
     document.getElementById("esconder2").style.display = "none";
     document.getElementById("btn-copy").style.display = "inline-block";
+=======
+    mensajeFinal = mensajeEncriptado
+    document.getElementById("texto").innerHTML = mensajeFinal;
+    document.getElementById("esconder").style.display = "none";
+    document.getElementById("esconder2").style.display = "none";
+    document.getElementById("btn-copiar").style.display = "inline-block";
+>>>>>>> nueva
 }
     
 
@@ -31,7 +39,12 @@ var mensajeAdesencriptar = document.getElementById("decodificador").value;
 
 (mensajeDesencriptado = mensajeAdesencriptar.replace(/ufat/g, 'u'));
            
+<<<<<<< HEAD
 document.getElementById("texto").innerHTML = mensajeDesencriptado;
+=======
+mensajeFinal = mensajeDesencriptado
+document.getElementById("texto").innerHTML = mensajeFinal;
+>>>>>>> nueva
 document.getElementById("esconder").style.display = "none";
 document.getElementById("esconder2").style.display = "none";
 
@@ -45,7 +58,11 @@ const btnCopiar = str => {
     // PASO 1
     const el = document.createElement("textarea");
     // PASO 2
+<<<<<<< HEAD
     el.value = aCopiar.value;
+=======
+    el.value = mensajeFinal
+>>>>>>> nueva
     el.setAttribute("readonly", "");
     // PASO 3
     el.style.position = "absolute";
