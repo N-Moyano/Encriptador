@@ -5,309 +5,97 @@
     font-size: 32px;
     line-height: 150%;
 }
-
 .logo{
-    padding-top: 10px;
-    margin-left: 10px;
-    width: 100%;
-
+    margin-top: 2%;
+    margin-left: 2%;
+    width: 8%;
 }
-
 main{
     display: flex;
     margin-bottom: 50px;
     margin-left: 50px;
+    gap: 30%;
+}
+
+.input{
+    margin-top: 10%;
+    margin-left: 20%;
+    border: none;
+    text-transform: lowercase;
+}
+
+::placeholder{ color:#0A3871;}
+    .input:focus {outline: none;
 }
 
 
-
-body{
-    /*box-sizing: border-box;
-    position: absolute;
-    width: 1440px;
-    height: 1024px;*/
-    
-    /*border: solid 1px;*/
+.texto{
+    background: white;
+    background-image: url("images/Muñeco.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 24px;
     color: #0A3871;
-    
-
-    
-}
-.logoBox{
-    width: 120px;
-    height: 48px;
-    position: relative;
-    margin: 40px 1280px 936px 40px;
-    padding: 0px 40px 0px 40px;
-    
-    
-}
-
-
-
-.frame1{
-    border: 1;
-    position: absolute;
-    width: 800px;
-    height: 100px;
-    left: 240px;
-    top: 168px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 150%;
-    color: #0A3871;
-}   
-
-#ingreseTexto{
-    width: 80%;
-    background-color: #3988e7;
-}
-        
-
-
-.rectangulo{
-    position: absolute;
-    width: 400px;
-    height: 944px;
-    left: 1000px;
-    top: 40px;
-    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
-    border-radius: 32px;
-    background-color: white;
-}
-
-.cuadrado{
-    position: absolute;
-    /*width: 336px;
-    height: 304px;
-    left: 1032px;
-    top: 283;
-    padding: 243px 32px 397px 32px;*/
-}
-.muneco{
-    position: relative;
-    width: 336px;
-    height: 304px;
-    /*left: 1032px;*/
-    padding: 243px 32px 397px 32px;
-}
-
-#texto{
-    position: absolute;
-    width: 336px;
-    height: 900px;
-    align-items: center;
-    padding: 25px 32px 25px 32px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 120%;
+    margin-top: 1%;
     text-align: center;
-    color: #343A40;
-    flex: none;
-    order: 0;
-    align-self: stretch;
-    flex-grow: 0;
-    overflow: auto;
-}
-
-.observaciones{
-    box-sizing: border-box;
-    position: absolute;
-    width: 336px;
-    height: 122px;
-    color: #0A3871;
-    left: 1032px;
-    top: 619px;
-}
-.cuadro1{
-    width: 336px;
-    height: 58px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 120%;
-    text-align: center;
-    color: #343A40;
-    flex: none;
-    order: 0;
-    align-self: stretch;
-    flex-grow: 0;
-}
-
-
-.cuadro2{
-    width: 336px;
-    height: 48px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    text-align: center;
-    color: #495057;
-    flex: none;
-    order: 1;
-    align-self: stretch;
-    flex-grow: 0;
-}
-
-.mensaje{
-    height: 58px;
-    width: 336px;
-    left: 0px;
-    top: 0px;
-    border-radius: nullpx;
+    width: 100%;
+    height: 500px;
+    text-transform: lowercase;
 
 }
-
-.indicaciones{
-    height: 48px;
-    width: 336px;
-    left: 0px;
-    top: 74px;
-    border-radius: nullpx;
+::placeholder{ color:#0A3871;}
+    .texto {outline: none;
 }
-
-.icon{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 0px;
-    position: absolute;
-    gap: 10px;
-    width: 680px;
-    height: 67px;
-    left: 240px;
-    top: 851px;
-}
-.botones{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 24px;
-    position: absolute;
-    width: 680px;
-    height: 67px;
-    left: 240px;
-    top: 885px;
-}
-.encriptar{
+.btn-copiar{
+    cursor: pointer;
     color: white;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 24px;
     gap: 8px;
     width: 328px;
     height: 67px;
-
-    /* Dark blue/dark-blue-300 */
-
     background: #0A3871;
     border-radius: 24px;
-
-    /* Inside auto layout */
-
-    flex: none;
-    order: 0;
-    flex-grow: 0;
 }
 
-.desencriptar{
-    color: #0A3871;
-    /* Button */
-    box-sizing: border-box;
 
-    /* Auto layout */
-
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 24px;
+.encriptar{
+    cursor: pointer;
+    display: inline;
+    color: white;
     gap: 8px;
     width: 328px;
     height: 67px;
-
-    /* Light gray */
-    background: #D8DFE8;
-
-    /* Dark blue/dark-blue-300 */
-    border: 1px solid #0A3871;
+    background: #0A3871;
     border-radius: 24px;
-
-    /* Inside auto layout */
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-
-    /* Button 
-    width: 280px;
-    height: 19px;*/
-    color: #0A3871;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    text-align: center;
-
-    /* Dark blue/dark-blue-300 */
-    color: #0A3871;
-
-    /* Inside auto layout */
-    flex: none;
-    order: 0;
-    flex-grow: 1;
 }
-
-.fake-textarea {
-    
-    width: 30rem;
-    padding: .5rem;
-    min-height: 1rem;
-  }
-  .fake-textarea:empty::before {
-    position: absolute;
-    content: "Escribe aquí...";
-    text-transform: lowercase;
-    .text-area
-  }
-  #decodificador {
-    display: none;
-    border-style: none;
-    
-
-  }
-#btn-copy{
-    border-radius: 24px;
-    position: absolute; 
-    font-size: large;
-    width: 120px;
-    height: 50px;
-    left: 150px;
-    top: 800px;
-    border: none;
+.desencriptar{
     cursor: pointer;
-     
+    color: #0A3871;
+    gap: 8px;
+    width: 328px;
+    height: 67px;
+    background: #F3F5Fc;
+    border-radius: 24px;
 }
-
-.mensaje-copy{
-    background: rgba(0, 0, 0, 0.7);
-    color: #fff;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
+@media screen and (max-width: 640px) { 
+    
+    main{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 900;
-    visibility: hidden;
-    /*opacity: 0;*/
-
+    margin-top: 10px;
+    margin-left: 10px;
+    gap: 30%;
+    }
+    .input{
+        lines:10;
+    }
+    .logo{
+    width: 50%;
+    margin-top: 30px;
+    }
+    .section2{
+        margin-left: none;
+    }
+    .texto{
+        margin-left: none;
+    }
 }
