@@ -11,11 +11,14 @@ function encript() {
 
     (mensajeEncriptado = mensajeAencriptar.replace(/u/g, 'ufat'));
     
-    document.getElementById("texto").innerHTML = mensajeEncriptado;
-    document.getElementById("esconder").style.display = "none";
-    document.getElementById("esconder2").style.display = "none";
-    document.getElementById("btn-copy").style.display = "inline-block";
-    console.log(mensajeEncriptado);            }
+    mensajeFinal = mensajeEncriptado
+    document.getElementById("texto").innerHTML = mensajeFinal;
+    document.getElementById("btn-copiar").style.display = "inline-block";
+    texto.style.backgroundImage = "none"
+
+    decodificador.value = ""
+    
+}
     
 
 function desencript() {
@@ -31,54 +34,30 @@ var mensajeAdesencriptar = document.getElementById("decodificador").value;
 
 (mensajeDesencriptado = mensajeAdesencriptar.replace(/ufat/g, 'u'));
            
-document.getElementById("texto").innerHTML = mensajeDesencriptado;
-document.getElementById("esconder").style.display = "none";
-document.getElementById("esconder2").style.display = "none";
-
+mensajeFinal = mensajeDesencriptado
+document.getElementById("texto").innerHTML = mensajeFinal;
+texto.style.backgroundImage = "none"
+decodificador.value = ""
 }
-
-const elemento = document.querySelector('.contenido-texto');
-
-document.querySelector('#btn-copy').addEventListener('click',()=>{
-
-    document.querySelector('.mensaje-copy').classList.add('show');
-    copyToClipBoard(elemento);
-
-    setTimeout(()=>{
-        document.querySelector('.mensaje-copy').classList.remove('show');
-    },1300);
-})     
 
   
 
-function copyToClipBoard(elemento){
-    const inputOculto = document.createElement('input');
+  
 
-    inputOculto.setAttribute('value', elemento.innerText);
-
-    document.body.appendChild(inputOculto);
-
-    inputOculto.select();
-
-    document.execCommand('copy');
-
-    document.body.removeChild(inputOculto);
-
-
-}
-
-
-//const elemento = document.querySelector('.texto');
-
-//document.querySelector('#btnCopiar').addEventListener('click',()=>{
-//    copiarAlPortapapeles(elemento); 
-//})
-
-//function copiarAlPortapapeles(elemento){
-//    const entradaOculta =document.createElement('input');
-
-//    entradaOculta.setAttribute('value' , elemento.innerText);
-//    document.body.appendChild(entradaOculta);
-    
-//    console.log(entradaOculta);
-//}
+const btnCopiar = str => {
+    // PASO 1
+    const el = document.createElement("textarea");
+    // PASO 2
+    el.value = mensajeFinal
+    el.setAttribute("readonly", "");
+    // PASO 3
+    el.style.position = "absolute";
+    el.style.left = "-9999px";
+    document.body.appendChild(el);
+    // PASO 4
+    el.select();
+    // PASO 5
+    document.execCommand("copy");
+    // PASO 6
+    document.body.removeChild(el);
+  };
