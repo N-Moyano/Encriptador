@@ -16,10 +16,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
     </head>
-    
+
     <body>
-        
-        
         <header>
             <div class="logoBox">
             <img class="logo" src="Images/Logo.png">
@@ -32,14 +30,14 @@
                 </div>
             </section1>
             <section2>
-                
-                <textarea class="texto" id="texto" rows="13" lines="100">Ningún mensaje fue encontrado
+
+                <textarea class="texto" id="texto" >Ningún mensaje fue encontrado
                     </textarea>
                 <div  class="observaciones">
                     <div id="esconder2" class="cuadro2">
-                
+
                     </div>
-                    <div>
+                    <div class="copy">
                         <button id="btn-copiar" class="btn-copiar" onclick="btnCopiar()">Copiar</button>   
                     </div>
                 </div>
@@ -48,10 +46,8 @@
         <section3>
             <div class="botonera">
                 <div class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16">
-                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
-                    </svg>
-                    <p> Solo letras minúsculas y sin acentos</p>
+                    <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/></svg> Solo letras minúsculas y sin acentos.</p>
                 </div>
                 <div class="botones">
                     <button class="encriptar" onclick="encript()">Encriptar</button>
@@ -59,8 +55,9 @@
                 </div>
             </div>
         </section3>
+        <button id="btn-copiar2" class="btn-copiar2" onclick="btnCopiar()">Copiar</button>   
     <script src="main.js"></script>        
     </body>
 
-    
+
 </html> 

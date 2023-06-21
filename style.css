@@ -6,30 +6,36 @@
     line-height: 150%;
 }
 .logo{
-    margin-top: 2%;
-    margin-left: 2%;
-    width: 8%;
+    margin-top: 30px;
+    margin-left: 10px;
+    
 }
 main{
     display: flex;
     margin-bottom: 50px;
     margin-left: 50px;
-    gap: 30%;
+    gap: 20%;
+    align-self: center;
+        text-align: center;
 }
 
 .input{
-    margin-top: 10%;
-    margin-left: 20%;
+    margin-top: 30px;
+    margin-left: 70px;
     border: none;
     text-transform: lowercase;
+    width: 100%;
 }
 
 ::placeholder{ color:#0A3871;}
     .input:focus {outline: none;
+        
 }
 
 
 .texto{
+    margin-top: 30px;
+    justify-content: right;
     background: white;
     background-image: url("images/Muñeco.png");
     background-position: center;
@@ -40,14 +46,15 @@ main{
     margin-top: 1%;
     text-align: center;
     width: 100%;
-    height: 500px;
+    height: 300px;
     text-transform: lowercase;
 
 }
 ::placeholder{ color:#0A3871;}
     .texto {outline: none;
+            
 }
-.btn-copiar{
+.btn-copiar,.btn-copiar2{
     cursor: pointer;
     color: white;
     gap: 8px;
@@ -56,7 +63,15 @@ main{
     background: #0A3871;
     border-radius: 24px;
 }
+.botonera{
+    width: 100%;
+    margin-left: 5%;
 
+}
+.botones{
+    display: inline-flex;
+    gap: 30px;
+}
 
 .encriptar{
     cursor: pointer;
@@ -77,25 +92,99 @@ main{
     background: #F3F5Fc;
     border-radius: 24px;
 }
+.btn-copiar2{
+    visibility: hidden;
+}
+
 @media screen and (max-width: 640px) { 
-    
+    body{
+        justify-items: center;
+        align-self: center;
+        text-align: center;
+
+            }
     main{
-    display: flex;
-    margin-top: 10px;
-    margin-left: 10px;
-    gap: 30%;
+        display: block;
+        margin: auto;
+    }
+    
+    .frame1{
+        flex-direction: row;
     }
     .input{
-        lines:10;
+        margin: 0 auto;
+        align-self: center;
+        text-align: center;
     }
     .logo{
-    width: 50%;
-    margin-top: 30px;
+        width: 20%;
+        margin-top: 30px;
+        align-self: bg cnn.kjbmcxza;
     }
-    .section2{
-        margin-left: none;
+    .textarea{
+        align-self: center;
+        text-align: center;
+
     }
     .texto{
-        margin-left: none;
+        background-image: none;
+        display: flex;
+        width: 100%;
+        height: 200px;
+        
+    }
+    .icon{
+        font-size: 25px;
+        margin: 5% 7% auto;
+        align-self: center;
+        text-align: center;
+    }
+    .observaciones{
+        width: 0p px;
+        justify-content: center;
+    }
+    .cuadro{
+        width: 0px;
+    }
+    .observaioes{
+        align-self: center;
+        text-align: center;
+    }
+    .copy{
+        padding-top: 10px;
+        margin-inline: 20%;
+        height: 1px;
+    }
+    .btn-copiar{
+        visibility: hidden;
+    }
+    .btn-copiar2{
+        margin-top: 2%;
+        visibility: visible;
+
+    }        
+    p{
+        font-size: 80%;
+    }
+    .encriptar, .desencriptar{
+        width: 200px;
+        font-size: 25px;
+    }
+    .section3{
+        width: 100%;
+        align-self: center;
+    }
+    .botonera{
+        align-self: center;
+        text-align: center;
+        margin-left: 0%;
+
+    }
+    .botones{
+        display: inline-flex;
+        font-size: 25px;
+        gap: 10px;
+        
+        
     }
 }

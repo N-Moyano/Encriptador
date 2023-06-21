@@ -15,29 +15,28 @@ function encript() {
     document.getElementById("texto").innerHTML = mensajeFinal;
     document.getElementById("btn-copiar").style.display = "inline-block";
     texto.style.backgroundImage = "none"
-
     decodificador.value = ""
     
 }
     
 
 function desencript() {
-var mensajeAdesencriptar = document.getElementById("decodificador").value;
+    var mensajeAdesencriptar = document.getElementById("decodificador").value;
 
-(mensajeAdesencriptar = mensajeAdesencriptar.replace(/enter/g, 'e'));
-          
-(mensajeAdesencriptar = mensajeAdesencriptar.replace(/imes/g, 'i'));
+    (mensajeAdesencriptar = mensajeAdesencriptar.replace(/enter/g, 'e'));
+            
+    (mensajeAdesencriptar = mensajeAdesencriptar.replace(/imes/g, 'i'));
 
-(mensajeAdesencriptar = mensajeAdesencriptar.replace(/ai/g, 'a'));
+    (mensajeAdesencriptar = mensajeAdesencriptar.replace(/ai/g, 'a'));
 
-(mensajeAdesencriptar = mensajeAdesencriptar.replace(/ober/g, 'o'));
+    (mensajeAdesencriptar = mensajeAdesencriptar.replace(/ober/g, 'o'));
 
-(mensajeDesencriptado = mensajeAdesencriptar.replace(/ufat/g, 'u'));
-           
-mensajeFinal = mensajeDesencriptado
-document.getElementById("texto").innerHTML = mensajeFinal;
-texto.style.backgroundImage = "none"
-decodificador.value = ""
+    (mensajeDesencriptado = mensajeAdesencriptar.replace(/ufat/g, 'u'));
+            
+    mensajeFinal = mensajeDesencriptado
+    document.getElementById("texto").innerHTML = mensajeFinal;
+    texto.style.backgroundImage = "none"
+    decodificador.value = ""
 }
 
   
